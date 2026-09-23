@@ -22,9 +22,8 @@ pipeline earns credit; *"80% seemed reasonable"* does not.
 For at least 4 of my 5 test questions, the retrieved chunks include one that
 contains the answer.
 
-**Why this target:**
-<!-- e.g. "One of my questions is about a topic only two documents mention, so
-     I expect that one to be hard." -->
+**Why this target:** One of my questions is about a topic only two documents mention, so I expect that one to be hard.
+
 
 ---
 
@@ -32,7 +31,7 @@ contains the answer.
 
 Every answer the system produces names at least one source document.
 
-**Why this target:**
+**Why this target:** Every answer should come from reliable sources, no exception.
 <!-- Why all five and not four? What about your setup makes that achievable —
      or what would have to go wrong for it not to be? -->
 
@@ -49,14 +48,15 @@ in at least 4 of 5 tries.
      what happened into your run log. Swap them for your own if you'd rather —
      just keep five of them, or the "4 of 5" above has nothing to be 4 of. -->
 
-**Why this target:**
+**Why this target:** I accept 1 failure because the distances might not have a clear gap, and strict relevance gate might hurt the answer come from two overlapped group.
 <!-- What did your distances look like when you set the cutoff in Milestone 4?
      Was there a clean gap, or did the two groups overlap? -->
 
 ---
 
 ## 4. Something about your chunks
-
+At least 4 of 5 sampled chunks read as a complete thought, with no
+     sentence cut in half at either end. No chunk is longer than 350 characters.
 <!-- YOU WRITE THIS ONE.
 
      How would you know if your chunks were the right size? Name something
@@ -71,14 +71,14 @@ in at least 4 of 5 tries.
 
 
 
-**Why this target:**
+**Why this target:** 317 chars is the rough length of answers in my corpus per documents.
 
 
 
 ---
 
 ## 5. Your choice
-
+4/5 source attribution being correct matched.
 <!-- YOU WRITE THIS ONE TOO.
 
      Pick something you actually care about getting right. It could be about
@@ -89,7 +89,7 @@ in at least 4 of 5 tries.
 
 
 
-**Why this target:**
+**Why this target:** I have one question need to extract information from two documents, which is a bit hard. So I give one exception here.
 
 
 
