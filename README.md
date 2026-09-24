@@ -1,6 +1,8 @@
 # The Unofficial Guide
 
-<!-- Replace this line with your name and which corpus you picked. -->
+Yuting Duan
+
+Corpus - campus_life
 
 > **This file is your submission.** Fill it in as you go — most sections get
 > written during the milestone that produces them, not at the end.
@@ -29,8 +31,13 @@
 
 ## Chunking Strategy
 
-**Chunk size:**
-**Overlap:**
+**Chunk size: 550**
+
+**Overlap:0**
+
+from chunker.py, I know that there is 88 chunks, 317 characters on average (shortest 178, longest 549).
+
+Given such numbers, the decision is: since every post is already one self-contained chunk (shortest 178, longest 549), keep chunk size above 549 and overlap at 0. There's nothing to protect against.
 
 <!-- What about YOUR documents made you pick these numbers? Short posts and
      long sectioned guides don't want the same chunking, and "800 seemed
@@ -53,29 +60,66 @@
 
      Milestone 3. -->
 
-**Chunk 1** — source: `` — produced by: ``
+**Chunk 1** 
 
 ```
+Chunk 1  |  source: admin_add_drop_deadline.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+On the add/drop deadline
+
+You can add a course through the end of the second week. Dropping is a longer window — through the end of week six — but a drop after week two shows as a W on your transcript. Nothing anywhere on the registrar's site says this plainly, and students find out from each other.
 ```
 
-**Chunk 2** — source: `` — produced by: ``
+**Chunk 2**
 
 ```
+Chunk 2  |  source: course_biol_160.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+BIOL 160 Cell Biology
+
+I lived here my sophomore year. Format is lecture three times a week with a weekly lab. Assessment: four unit tests and a cumulative final. Not curved.
+
+Expect 9 to 11 hours a week, the heaviest first-year course by reputation.
+
+The one piece of advice: the unit tests come fast, roughly every three weeks; falling behind once is very hard to recover from.
 ```
 
-**Chunk 3** — source: `` — produced by: ``
+**Chunk 3**
 
 ```
+Chunk 3  |  source: course_hist_118_workload.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+Workload for HIST 118 Modern World History
+
+People keep asking so: a lot of reading, about 120 pages a week, but no problem sets. That's real time, not optimistic time.
+
+It's front-loaded — the first month is heavier than the rest, partly because you're learning the format.
 ```
 
-**Chunk 4** — source: `` — produced by: ``
-
+**Chunk 4**
 ```
+Chunk 4  |  source: dining_pellew_dining_hall_followup.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+Re: Pellew Dining Hall
+
+Adding to what people have said about Pellew Dining Hall. The wait figure of 12 to 18 minutes at peak matches what I've seen. If you're trying to eat between classes, go before 11:45 and it's a different building entirely.
+
+Also worth saying: the furthest hall from anywhere, next to the athletics centre. Nobody tells you this at orientation.
 ```
 
-**Chunk 5** — source: `` — produced by: ``
-
+**Chunk 5**
 ```
+Chunk 5  |  source: housing_innisfree_hall.txt#0  |  produced by: chunker.py::split_documents
+======================================================================
+Innisfree Hall — what it's actually like
+
+Transferred in last year, so take this with a grain of salt. Built 1991, renovated 2022. Rooms are doubles arranged as pairs sharing one bathroom between two rooms.
+
+The good: the shared-bathroom-between-two-rooms arrangement is the best compromise on campus.
+
+The bad: no air conditioning, which matters for the first three weeks of September.
+
+Laundry costs $1.75 wash, $1.75 dry, app-based. On noise: moderate; the building is L-shaped and the short wing is much quieter.
 ```
 
 ## Sample Answer
@@ -84,13 +128,19 @@
      visible. Milestone 4. -->
 
 **Question:**
-
+Where can I find a quite study space?
 **Answer:**
 
 ```
+  (best distance 0.583, cutoff 0.6)
+
+Based on the provided documents, you can find quiet study spaces in the library: the third floor is silent and enforced, and the second floor is quiet in theory (from **study_library_hours.txt**). Additionally, quiet floors on levels 3 and 4 of Aldridge Hall are genuinely enforced (from **housing_aldridge_hall.txt**).
+
+Sources retrieved: course_cs_210.txt, course_cs_340.txt, course_cs_340_exams.txt, course_econ_101.txt, course_hist_118.txt, course_math_220.txt, housing_aldridge_hall.txt, money_textbooks.txt, study_group_rooms.txt, study_library_hours.txt
+
 ```
 
-**My relevance cutoff:**
+**My relevance cutoff:** 0.7
 
 <!-- The number you set in config.py, and how you got there.
 
@@ -103,7 +153,16 @@
 
 | Question | In corpus? | Best distance |
 |---|---|---|
-|  |  |  |
+|Question 1  | y | 0.366 |
+|Q2  | y | 0.18 |
+|Q3  | y | 0.313 |
+|Q4  | y | 0.518 |
+|Q5  | y | 0.394 |
+|Out of Scope1  | n | 0.8+ |
+|O2  | n | 0.8+ | 
+|O3  | n | 0.8+ | 
+|O4  | n |0.8+  | 
+|O5  | n | 0.8+ |
 
 ## How I Used AI
 
@@ -117,9 +176,9 @@
      Milestone 5. -->
 
 **1.**
-
+Since I worked alone on Milestone3, so I asked AI to evaluate whether the chunks from my documents could answer on its own. It gets back to me that all five chunks works well.
 **2.**
-
+The instructor walked us over the RAG workflow briefly and I got a bit confused, so I chat with AI for more details.
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
      claims earns nothing.
