@@ -27,7 +27,7 @@ QUESTIONS = [
     {"question": "Can I declare my major early?", "expects": "Yes, but no advantage to declaring early except that it assigns you a departmental adviser, who is generally more useful than the general one"},
     {"question": "Is the housing lottery random?", "expects": "Rising sophomores get a number drawn at random, but juniors and seniors are ordered by accumulated credit hours first, and only tie-break randomly."},
     {"question": "Where can I find a quite study space?", "expects": "2nd floor and 3rd floor in library."},
-    {"question": "What do students say about wait times at Pellew during lunch?", "12 to 18 minutes at peak between 11:45 to 12:30"},
+    {"question": "What do students say about wait times at Pellew during lunch?", "expects": "12 to 18 minutes at peak."},
 ]
 
 # Questions from a different world entirely. Your gate should refuse all five.

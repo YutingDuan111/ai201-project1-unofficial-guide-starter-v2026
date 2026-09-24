@@ -180,6 +180,7 @@ Sources retrieved: course_cs_210.txt, course_cs_340.txt, course_cs_340_exams.txt
 
 **1.**
 Since I worked alone on Milestone3, so I asked AI to evaluate whether the chunks from my documents could answer on its own. It gets back to me that all five chunks works well.
+
 **2.**
 The instructor walked us over the RAG workflow briefly and I got a bit confused, so I chat with AI for more details.
 <!-- ── Stretch features ─────────────────────────────────────────────────────
@@ -209,11 +210,11 @@ The instructor walked us over the RAG workflow briefly and I got a bit confused,
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
-| 1. Retrieved chunk contains the answer | 4 of 5 |  |  |  |  |
-| 2. Every answer names a source | 5 of 5 |  |  |  |  |
-| 3. Gate stops out-of-corpus questions | 4 of 5 |  |  |  |  |
-| 4. | | | | | |
-| 5. | | | | | |
+| 1. Retrieved chunk contains the answer | 4 of 5 | 1/5 | 1/5 | 1/5 | MISSED |
+| 2. Every answer names a source | 5 of 5 | 5/5 | 4/5 | 5/5 | MISSED |
+| 3. Gate stops out-of-corpus questions | 4 of 5 | 5/5 | 5/5 | 5/5 | MET |
+| 4. Sampled chunks read as a complete thought| 4 of 5| | | | |
+| 5. source attribution being correct matched.|4 of 5 |5/5 |5/5 | 5/5| MET|
 
 <!-- Underneath, paste the REAL output for each criterion from one of your
      runs — the actual text your system produced, not a description of it.
