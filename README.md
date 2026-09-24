@@ -28,6 +28,9 @@ Corpus - campus_life
      this repo.
 
      Milestone 5. -->
+This repo is for practicing RAG. The corpus is campus_life. The agent should be able to answer questions about student 
+     life from information extracted from other students post docs. If there is no inforamtion can find from the docs, 
+     the agent should not make it up, just state they don't know honestly.
 
 ## Chunking Strategy
 
